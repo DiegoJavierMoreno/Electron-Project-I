@@ -7,10 +7,11 @@
     "start": "electron .",
     "watch": "nodemon --exec electron .",
     "reset": "git reset --hard",
-    "build": "electron-builder --help"
+    "build": "electron-builder build",
+    "win-cert": "electron-builder create-self-signed-cert -p DiegoJavierMoreno"
   },
-  "repository": "https://github.com/stackacademytv/master-electron",
-  "homepage": "https://github.com/stackacademytv/master-electron",
+  "repository": "https://github.com/DiegoJavierMoreno/Electron-Project-I",
+  "homepage": "https://github.com/DiegoJavierMoreno/Electron-Project-I",
   "keywords": [
     "Electron",
     "Master Electron",
@@ -34,7 +35,10 @@
       "target": "dmg"
     },
     "win": {
-      "target": "zip"
+      "certificateFile": "private/DiegoJavierMoreno.pfx",
+      "certificatePassword": "",
+      "verifyUpdateCodeSignature": false,
+      "publisherName": "DiegoJavierMoreno"
     },
     "linux": {
       "category": "Utility"
