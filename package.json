@@ -1,26 +1,47 @@
 {
   "name": "master-electron",
   "version": "1.0.0",
-  "description": "Master Electron Course Code",
+  "description": "Master Electron Project",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
     "watch": "nodemon --exec electron .",
-    "reset": "git reset --hard"
+    "reset": "git reset --hard",
+    "build": "electron-builder build",
+    "win-cert": "electron-builder create-self-signed-cert -p DiegoJavierMoreno"
   },
-  "repository": "https://github.com/stackacademytv/master-electron",
+  "repository": "https://github.com/DiegoJavierMoreno/Electron-Project-I",
+  "homepage": "https://github.com/DiegoJavierMoreno/Electron-Project-I",
   "keywords": [
     "Electron",
     "Master Electron",
     "demo"
   ],
-  "author": "GitHub, Stackacademytv",
+  "author": "Stackacademytv",
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^5.0.0",
+    "electron-builder": "^22.6.1",
     "nodemon": "^1.18.9"
   },
   "dependencies": {
     "electron-window-state": "^5.0.3"
+  },
+  "build": {
+    "appId": "",
+    "copyright": "",
+    "mac": {
+      "category": "public.app-category.productivity",
+      "target": "dmg"
+    },
+    "win": {
+      "certificateFile": "private/DiegoJavierMoreno.pfx",
+      "certificatePassword": "",
+      "verifyUpdateCodeSignature": false,
+      "publisherName": "DiegoJavierMoreno"
+    },
+    "linux": {
+      "category": "Utility"
+    }
   }
 }
