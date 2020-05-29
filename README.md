@@ -18,3 +18,13 @@ Project 1: Cross Platform Desktop Apps using HTML, JavaScript &amp; CSS
 -> electron-builder build
 
 ## Update:
+-> electron-builder -w -p 'onTagOrDraft'
+
+## AutoUpdater
+-> npm i electron-update
+
+-> npm i electron-log
+
+-> https://github.com/megahertz/electron-log
+
+->  echo '' > 'C:\Users\DiegoJavier\AppData\Roaming\Readit\logs\main.log'

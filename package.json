@@ -1,5 +1,5 @@
 {
-  "name": "master-electron",
+  "name": "Readit",
   "version": "1.0.0",
   "description": "Master Electron Project",
   "main": "main.js",
@@ -8,6 +8,7 @@
     "watch": "nodemon --exec electron .",
     "reset": "git reset --hard",
     "build": "electron-builder build",
+    "release": "electron-builder -w -p 'onTagOrDraft'",
     "win-cert": "electron-builder create-self-signed-cert -p DiegoJavierMoreno"
   },
   "repository": "https://github.com/DiegoJavierMoreno/Electron-Project-I",
@@ -17,7 +18,7 @@
     "Master Electron",
     "demo"
   ],
-  "author": "Stackacademytv",
+  "author": "DiegoJavier",
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^5.0.0",
@@ -25,11 +26,16 @@
     "nodemon": "^1.18.9"
   },
   "dependencies": {
+    "electron-log": "^4.2.0",
+    "electron-updater": "^4.3.1",
     "electron-window-state": "^5.0.3"
   },
   "build": {
-    "appId": "",
-    "copyright": "",
+    "appId": "com.DiegoJavierMoreno.readit",
+    "copyright": "Copyright 2020 DiegoJavierMorenoRusinque",
+    "publish": {
+      "provider": "github"
+    },
     "mac": {
       "category": "public.app-category.productivity",
       "target": "dmg"
