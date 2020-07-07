@@ -21,7 +21,7 @@
   "author": "DiegoJavier",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^5.0.0",
+    "electron": "^7.2.4",
     "electron-builder": "^22.6.1",
     "nodemon": "^1.18.9"
   },
